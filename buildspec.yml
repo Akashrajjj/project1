@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 692859932620.dkr.ecr.ap-south-1.amazonaws.com
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)
-      - IMAGE_URI=692859932620.dkr.ecr.ap-south-1.amazonaws.com/my-nginx-app:$IMAGE_TAG
+      - IMAGE_URI=692859932620.dkr.ecr.ap-south-1.amazonaws.com/my-app:latest55
       - echo Building image $IMAGE_URI
 
   build:
